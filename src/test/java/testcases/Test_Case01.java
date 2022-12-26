@@ -1,7 +1,8 @@
 
-package testcase01;
+package testcases;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,11 +36,12 @@ public class Test_Case01 {
             System.out.println("Text PASSED");
         }else System.out.println("Text FAILED");
 
+
         // Enter name and email address
         driver.findElement(By.xpath("//*[@type='text']")).sendKeys("hanzel");
         Thread.sleep(1500);
         WebElement email= driver.findElement(By.xpath("(//*[@type='email'])[2]"));
-        email.sendKeys("emaiil1940@gmail.com");
+        email.sendKeys("emaiil19401@gmail.com");
         Thread.sleep(1500);
 
         // Click 'Signup' button
@@ -69,7 +71,6 @@ public class Test_Case01 {
 
 
         // Select checkbox 'Sign up for our newsletter!'
-
         driver.findElement(By.xpath("//*[@name='newsletter']")).click();
 
         //Select checkbox 'Receive special offers from our partners!'
@@ -108,6 +109,10 @@ public class Test_Case01 {
         //Click 'Continue' button
         driver.findElement(By.xpath("//*[@class='btn btn-primary']")).click();
 
+//====> //Cikan reklama close dedik ==> calismayabilir !!!!!!!1
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//*[@id='dismiss-button']")).click();
+
         //Verify that 'Logged in as username' is visible
         WebElement usernameKontrol = driver.findElement(By.xpath("//*[@class='fa fa-user']"));
         if (usernameKontrol.isDisplayed()) {
@@ -127,7 +132,7 @@ public class Test_Case01 {
 
         driver.close();
 
-
+       // newUSGorunumu.sendKeys("asdadasdsa", Keys.ENTER);
 
 
 
