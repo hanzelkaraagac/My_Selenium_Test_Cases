@@ -49,7 +49,7 @@ public class Test_case06 {
 
         Thread.sleep(3000);
 
-        // Click OK button
+        // Click OK button ==> Cikan alert kismini onaylar.
         driver.switchTo().alert().accept();
 
         Thread.sleep(3000);
