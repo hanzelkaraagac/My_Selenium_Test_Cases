@@ -1,4 +1,4 @@
-package testcases;
+package testcases01;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.sql.SQLOutput;
 import java.time.Duration;
 
 public class Test_Case07 {
