@@ -34,8 +34,8 @@ public class Test_Case08 {
         driver.get("http://automationexercise.com");
 
         // Verify that home page is visible successfully
-        WebElement urlGorunumu = driver.findElement(By.xpath("(//*[@href=\"/\"])[1]"));
-        Assert.assertTrue(urlGorunumu.isDisplayed());
+        WebElement homePage = driver.findElement(By.xpath("//body"));
+        Assert.assertTrue(homePage.isDisplayed());
 
         // Click on 'Products' button
         driver.findElement(By.xpath("//*[text()=' Products']")).click();

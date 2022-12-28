@@ -31,8 +31,8 @@ public class Test_Case07 {
         driver.get("http://automationexercise.com");
 
         // Verify that home page is visible successfully
-        WebElement homePageVerify = driver.findElement(By.xpath("(//*[@href='/'])[1]"));
-        Assert.assertTrue(homePageVerify.isDisplayed());
+        WebElement homePage = driver.findElement(By.xpath("//body"));
+        Assert.assertTrue(homePage.isDisplayed());
 
         // Click on 'Test Cases' button
         driver.findElement(By.xpath("(//*[text()=' Test Cases'])[1]")).click();
