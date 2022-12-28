@@ -70,7 +70,4 @@ public class Test_case06 {
 
         driver.close();
     }
-
 }
-
-

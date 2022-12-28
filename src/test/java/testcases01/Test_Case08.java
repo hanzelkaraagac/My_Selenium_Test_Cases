@@ -90,5 +90,6 @@ public class Test_Case08 {
 
         WebElement brandGorunumu = driver.findElement(By.xpath("//*[text()='Brand:']"));
         Assert.assertTrue(categoryGorunumu.isDisplayed());
+
     }
 }
