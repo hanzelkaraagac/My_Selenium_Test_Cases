@@ -36,8 +36,15 @@ public class Test_Case01 {
         Assert.assertTrue(homePage.isDisplayed());
 
         //searcbox'daki "all"dan "Video Games"'a tiklayalim ve "gta 5" i aratalim.
+
+
         //cikan ilk resme tiklayalim.
+
+
         //tekrar anasayfaya donelim.
+
+
+        //
 
 
 

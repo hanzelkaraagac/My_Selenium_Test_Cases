@@ -77,7 +77,8 @@ public class Test_Case09 {
 //        }
 
         //3.YOL
-        List<WebElement> allWantedItems  = driver.findElements(By.xpath("(//*[@class='productinfo text-center']/p) [2]"));
+        List<WebElement> allWantedItems  = driver.findElements(By.
+                xpath("(//*[@class='productinfo text-center']/p) [2]"));
 
         allWantedItems.stream().forEach(WebElement::isDisplayed);
 
