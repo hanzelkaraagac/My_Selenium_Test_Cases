@@ -18,7 +18,7 @@ public class Test_Case01 {
 
 
         // Navigate to url 'http://automationexercise.com'
-        driver.get("http://automationexercise.com");
+        driver.get("https://automationexercise.com");
 
         // Verify that home page is visible successfully
         WebElement urlGorunumu = driver.findElement(By.xpath("(//*[@href=\"/\"])[1]"));
