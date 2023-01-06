@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Test_Case07 {
+public class Test_Case07_Verify_Test_Cases_Page {
     WebDriver driver;
     @Before
     public void setUp(){

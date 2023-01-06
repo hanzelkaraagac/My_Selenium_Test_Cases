@@ -6,15 +6,17 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 
-public class Test_Case10 {
+public class Test_Case10_Verify_Subscription_in_Home_Page {
     static WebDriver driver;
     @BeforeClass
     public static void beforeClass() {
@@ -38,8 +40,8 @@ public class Test_Case10 {
         Assert.assertTrue(homepage.isDisplayed());
 
         // Scroll down to footer ==> Altbilgiye doğru aşağı kaydır
-        Robot robot = new Robot();
-        robot.keyPress(KeyEvent.VK_END); //Sayfanin en sonuna inmesini sagladi
+        Actions actions = new Actions(driver);
+        actions.sendKeys(Keys.END).perform();//Sayfanin en sonuna inmesini sagladi
 
         // Verify text 'SUBSCRIPTION'
         WebElement subscription = driver.findElement(By.xpath("//h2[normalize-space()='Subscription']"));

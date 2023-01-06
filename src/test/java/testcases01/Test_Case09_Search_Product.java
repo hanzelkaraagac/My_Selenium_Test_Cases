@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.List;
 
-public class Test_Case09 {
+public class Test_Case09_Search_Product {
     static  WebDriver driver;
     @BeforeClass
     public static void beforeClass() {

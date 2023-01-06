@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Test_Case01 {
+public class Test_Case01_Register_User {
     public static void main(String[] args) throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver","/Users/macbookair/Documents/selenium libraries/drivers/chromedriver");

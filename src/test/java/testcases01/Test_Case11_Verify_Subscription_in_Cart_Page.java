@@ -3,6 +3,7 @@ package testcases01;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
@@ -10,7 +11,7 @@ import utilities.TestBase;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Test_Case11 extends TestBase {
+public class Test_Case11_Verify_Subscription_in_Cart_Page extends TestBase {
     @Test
     public void test01() throws InterruptedException, AWTException {
         //Navigate to url 'http://automationexercise.com' ==> 'http:automationexercise.com' url'sine gidin
@@ -25,8 +26,8 @@ public class Test_Case11 extends TestBase {
         Thread.sleep(1500);
 
         // Scroll down to footer ==> Altbilgiye doğru aşağı kaydır
-        Robot robot = new Robot();
-        robot.keyPress(KeyEvent.VK_END);
+        Actions actions = new Actions(driver);
+        actions.sendKeys(Keys.END).perform();
 
         // Verify text 'SUBSCRIPTION'
         WebElement verifyText = driver.findElement(By.xpath("//h2"));

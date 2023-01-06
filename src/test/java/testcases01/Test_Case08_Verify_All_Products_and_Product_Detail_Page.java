@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Test_Case08 {
+public class Test_Case08_Verify_All_Products_and_Product_Detail_Page {
     static WebDriver driver;
     @BeforeClass
     public static void beforeClass() {

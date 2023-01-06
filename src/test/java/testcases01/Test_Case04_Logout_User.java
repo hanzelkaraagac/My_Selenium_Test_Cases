@@ -7,8 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Test_Case03 {
-
+public class Test_Case04_Logout_User {
     public static void main(String[] args) throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver", "/Users/macbookair/Documents/selenium libraries/drivers/chromedriver");
@@ -23,8 +22,7 @@ public class Test_Case03 {
         WebElement urlGorunumu = driver.findElement(By.xpath("(//*[@href=\"/\"])[1]"));
         if (urlGorunumu.isDisplayed()) {
             System.out.println("Text PASSED");
-        } else System.out.println("Text FAILED");
-
+        }else System.out.println("Text FAILED");
 
         // Click on 'Signup / Login' button
         driver.findElement(By.xpath("//*[@ class='fa fa-lock']")).click();
@@ -35,25 +33,31 @@ public class Test_Case03 {
             System.out.println("Text PASSED");
         } else System.out.println("Text FAILED");
 
-        // Enter incorrect email address and password
-        driver.findElement(By.xpath("(//*[@name='email'])[1]")).sendKeys("emaiil19400@gmail.com");
+        // Enter correct email address and password
+        driver.findElement(By.xpath("(//*[@name='email'])[1]")).sendKeys("emaiil1940@gmail.com");
         Thread.sleep(1500);
-        driver.findElement(By.xpath("//*[@placeholder='Password']")).sendKeys("ASD123bb");
+        driver.findElement(By.xpath("//*[@placeholder='Password']")).sendKeys("ASD123b");
         Thread.sleep(1500);
 
         // Click 'login' button
         driver.findElement(By.xpath("//*[text()='Login']")).click();
 
-        // Verify error 'Your email or password is incorrect!' is visible
-        WebElement mailVerifity = driver.findElement(By.xpath("//*[text()='Your email or password is incorrect!']"));
-        if (mailVerifity.isDisplayed()) {
-            System.out.println("Text PASSED");
-        } else System.out.println("Text FAILED");
+        // Verify that 'Logged in as username' is visible
+        WebElement usernameKontrol = driver.findElement(By.xpath("//*[@class='fa fa-user']"));
+        if (usernameKontrol.isDisplayed()) {
+            System.out.println("TEST PASSED");
+        } else System.out.println("TEST FAILED");
+
+        // Click 'Logout' button
+        driver.findElement(By.xpath("//*[text()=' Logout']")).click();
+
+        // Verify that user is navigated to login page
+        WebElement navigatedVerify = driver.findElement(By.xpath("//*[text()=' Signup / Login']"));
+        if (navigatedVerify.isDisplayed()) {
+            System.out.println("TEST PASSED");
+        } else System.out.println("TEST FAILED");
 
         driver.close();
 
-
-
     }
 }
-

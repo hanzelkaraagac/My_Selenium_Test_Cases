@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Test_Case05 {
+public class Test_Case03_User_With_Incorrect_Email_and_Password {
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -23,33 +23,37 @@ public class Test_Case05 {
         WebElement urlGorunumu = driver.findElement(By.xpath("(//*[@href=\"/\"])[1]"));
         if (urlGorunumu.isDisplayed()) {
             System.out.println("Text PASSED");
-        }else System.out.println("Text FAILED");
+        } else System.out.println("Text FAILED");
+
 
         // Click on 'Signup / Login' button
         driver.findElement(By.xpath("//*[@ class='fa fa-lock']")).click();
 
-        // Verify 'New User Signup!' is visible
-        WebElement newUSGorunumu = driver.findElement(By.xpath("//*[text()='New User Signup!']"));
-        if (newUSGorunumu.isDisplayed()){
+        // Verify 'Login to your account' is visible
+        WebElement loginGorunumu = driver.findElement(By.xpath("//*[text()='Login to your account']"));
+        if (loginGorunumu.isDisplayed()) {
             System.out.println("Text PASSED");
-        }else System.out.println("Text FAILED");
+        } else System.out.println("Text FAILED");
 
-        // Enter name and already registered email address
-        driver.findElement(By.xpath("//*[@type='text']")).sendKeys("hanzel");
+        // Enter incorrect email address and password
+        driver.findElement(By.xpath("(//*[@name='email'])[1]")).sendKeys("emaiil19400@gmail.com");
         Thread.sleep(1500);
-        WebElement email= driver.findElement(By.xpath("(//*[@type='email'])[2]"));
-        email.sendKeys("emaiil1940@gmail.com");
+        driver.findElement(By.xpath("//*[@placeholder='Password']")).sendKeys("ASD123bb");
         Thread.sleep(1500);
 
-        // Click 'Signup' button
-        driver.findElement(By.xpath("(//*[@type='submit'])[2]")).click();
+        // Click 'login' button
+        driver.findElement(By.xpath("//*[text()='Login']")).click();
 
-        // Verify error 'Email Address already exist!' is visible
-        WebElement verifyError = driver.findElement(By.xpath("//*[text()='Email Address already exist!']"));
-        if (verifyError.isDisplayed()) {
+        // Verify error 'Your email or password is incorrect!' is visible
+        WebElement mailVerifity = driver.findElement(By.xpath("//*[text()='Your email or password is incorrect!']"));
+        if (mailVerifity.isDisplayed()) {
             System.out.println("Text PASSED");
-        }else System.out.println("Text FAILED");
+        } else System.out.println("Text FAILED");
 
         driver.close();
+
+
+
     }
 }
+

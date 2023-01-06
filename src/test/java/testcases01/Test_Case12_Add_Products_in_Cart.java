@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import utilities.TestBase;
 
-public class Test_Case12 extends TestBase {
+public class Test_Case12_Add_Products_in_Cart extends TestBase {
     @Test
     public void test01() {
         // Navigate to url 'http://automationexercise.com'
