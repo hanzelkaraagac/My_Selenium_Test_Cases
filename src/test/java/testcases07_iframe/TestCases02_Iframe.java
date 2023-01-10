@@ -1,4 +1,4 @@
-package testcases07iframe;
+package testcases07_iframe;
 
 import org.junit.Assert;
 import org.junit.Test;
