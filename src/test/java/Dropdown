@@ -3,9 +3,9 @@ Select tag'i dropdown olusturmak icin kullanilir.
 
 getOptions() ==> tum secenekleri secip bir list<WebElement> return eder.
 
-yearDropDown.selectByIndex() ==> Senecek sirasi 0'dan baslar. index'ini alir.
+selectByIndex() ==> Senecek sirasi 0'dan baslar. index'ini alir.
 
-ayDropDown.selectByValue() ==> value attirube'i varsa onun degerini alir.
+selectByValue() ==> value attirube'i varsa onun degerini alir.
 
 selectByVisibleText() ==> text'ini alir.
 
