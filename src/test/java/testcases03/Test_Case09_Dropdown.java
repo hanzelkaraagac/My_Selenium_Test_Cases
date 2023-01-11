@@ -2,7 +2,9 @@ package testcases03;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import utilities.TestBase;
 
@@ -68,8 +70,16 @@ public class Test_Case09_Dropdown extends TestBase {
         }
 
         //Which programming languages do you know? kismindan Java ve JavaScript'i secelim.
+        WebElement language = driver.findElement(By.xpath("//select[@name='Languages']"));
+        Select select6 = new Select(language);
+        select6.selectByIndex(0);
+        select6.selectByIndex(1);
+
+
+
 
         //large button'a click yapin.
+        driver.findElement(By.xpath("//*[@id='dropdownMenuButton1']")).click();
 
 
     }
