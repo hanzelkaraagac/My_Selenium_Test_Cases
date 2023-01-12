@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 public class TestCases03 {
-    static WebDriver driver;
+    static  WebDriver driver;
     static String ilkUrunText;
     static WebElement ilkUrun;
     WebElement sepetKontrol;
