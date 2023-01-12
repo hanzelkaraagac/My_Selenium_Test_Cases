@@ -1,4 +1,4 @@
-package testcases11;
+package testcases11_Selenium_Study;
 
 
 import org.openqa.selenium.By;
