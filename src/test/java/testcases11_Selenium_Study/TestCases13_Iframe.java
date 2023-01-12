@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class TestCases13 {
+public class TestCases13_Iframe {
     WebDriver driver;
     @Before
     public void setUp(){
