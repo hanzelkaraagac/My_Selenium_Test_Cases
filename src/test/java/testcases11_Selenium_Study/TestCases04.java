@@ -13,7 +13,6 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 public class TestCases04 {
     /*
     ~ Navigate to http://tutorialsninja.com/demo/index.php?route=common/home
