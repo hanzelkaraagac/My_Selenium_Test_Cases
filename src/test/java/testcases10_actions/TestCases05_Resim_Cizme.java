@@ -7,6 +7,14 @@ import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
 public class TestCases05_Resim_Cizme extends TestBase {
+
+     /*
+    - http://szimek.github.io/signature_pad/ sayfasına gidiniz
+    - Çıkan ekrana istediğiniz çizgi yada şekli çiziniz
+    - Çizimden sonra clear butonuna basalım
+    - Son olarak sayfayı temizleyiniz
+     */
+
     @Test
     public void test01() {
 
@@ -14,22 +22,26 @@ public class TestCases05_Resim_Cizme extends TestBase {
         driver.get("http://szimek.github.io/signature_pad/");
 
 //    - Çıkan ekrana istediğiniz çizgi yada şekli çiziniz
-        WebElement cizim = driver.findElement(By.xpath("//*[@class='signature-pad--body']"));
+        WebElement yaziTahtasi = driver.findElement(By.xpath("//canvas"));
         Actions actions = new Actions(driver);
 
-        actions.clickAndHold(cizim).moveByOffset(35,20)
-                .moveByOffset(50,10)
-                .moveByOffset(-10,-50)
-                .moveByOffset(-50,-10)
-                .release().perform();
+        actions.moveToElement(yaziTahtasi).clickAndHold();
 
+        for (int i = 0; i < 10; i++) {
+            actions.moveByOffset(-5,-5);
+        }
+        for (int i = 0; i < 10; i++) {
+            actions.moveByOffset(0,5);
+        }
+        for (int i = 0; i < 10; i++) {
+            actions.moveByOffset(5,0);
+        }
+        actions.release().build().perform();
 
+        waitFor(3);
 
-
-
-
-
-//    - Son olarak sayfayı temizleyiniz
+//    - Çizimden sonra clear butonuna basalım
+        driver.findElement(By.xpath("//*[text()='Clear']")).click();
 
     }
 }
