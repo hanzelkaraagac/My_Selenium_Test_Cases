@@ -7,9 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
-import java.security.Key;
-
-public class TestCases07 extends TestBase {
+public class TestCases07_Faker extends TestBase {
 
     /*
                                - FAKER -
