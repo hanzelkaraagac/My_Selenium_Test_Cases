@@ -1,4 +1,4 @@
-package testcases12_practice.automationtesting.in;
+package testcases12_automationtesting.in;
 
 import org.junit.Assert;
 import org.junit.Test;
