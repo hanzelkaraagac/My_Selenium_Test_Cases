@@ -8,6 +8,8 @@ import utilities.TestBase;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class TestCases13_ScreenShot extends TestBase {
 
@@ -19,6 +21,12 @@ public class TestCases13_ScreenShot extends TestBase {
         //Tüm sayfanın resmini alalım
         TakesScreenshot ts = (TakesScreenshot) driver;
         FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE),new File("target/tumSayfaResmi/tumSayfa.jpeg"));
+
+        //ustune yazdirmaasi icin
+        String tarih = new SimpleDateFormat ("hh_mm_ss_ddMMYYYY").format(new Date());
+//      FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE),new File("target/tumSayfaResmi/tumSayfa"+tarih+".jpeg"));
+
+
         //FileUtils ==> okuyama yazma ve kopyalama islemlerinde bize yardimci oluyor
         /*
         FILEUTILS CLASS'I, FILE NESNELERI ILE BIRLIKTE KULLANABILECEGIMIZ METHODLAR ICERIR.
