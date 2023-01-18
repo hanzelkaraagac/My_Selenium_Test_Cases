@@ -7,8 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
-import java.util.List;
-
 public class TestCases06 extends TestBase {
     @Test
     public void test01() {
