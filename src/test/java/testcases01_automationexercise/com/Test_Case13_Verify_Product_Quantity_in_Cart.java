@@ -49,6 +49,6 @@ public class Test_Case13_Verify_Product_Quantity_in_Cart extends TestBase {
         driver.findElement(By.xpath("(//*[@class='text-center'])[2]")).click();
 
         // Verify that product is displayed in cart page with exact quantity //Ürünün sepet sayfasında tam miktarla görüntülendiğini doğrulayın
-        driver.findElement(By.xpath("//*[text()='4']")).isDisplayed();
+        assert driver.findElement(By.xpath("//*[text()='4']")).isDisplayed();
     }
 }

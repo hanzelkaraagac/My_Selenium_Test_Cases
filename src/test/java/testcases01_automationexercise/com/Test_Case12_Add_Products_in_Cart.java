@@ -40,20 +40,19 @@ public class Test_Case12_Add_Products_in_Cart extends TestBase {
         driver.findElement(By.linkText("View Cart")).click();
 
         // Verify both products are added to Cart //Her iki ürünün de Sepete eklendiğini doğrulayın
-        driver.findElement(By.xpath("//*[text()='Blue Top']")).isDisplayed();
-        driver.findElement(By.xpath("//*[text()='Men Tshirt']")).isDisplayed();
-
+        assert driver.findElement(By.xpath("//*[text()='Blue Top']")).isDisplayed();
+        assert driver.findElement(By.xpath("//*[text()='Men Tshirt']")).isDisplayed();
 
 
         // Verify their prices, quantity and total price //Fiyatlarını, miktarlarını ve toplam fiyatlarını doğrulayın
         //Birinci urunlerin gorunurlugu
-        driver.findElement(By.xpath("//*[text()='Rs. 500']")).isDisplayed();
-        driver.findElement(By.xpath("//*[text()='1']")).isDisplayed();
-        driver.findElement(By.xpath("//*[text()='Rs. 500']")).isDisplayed();
+        assert driver.findElement(By.xpath("//*[text()='Rs. 500']")).isDisplayed();
+        assert driver.findElement(By.xpath("//*[text()='1']")).isDisplayed();
+        assert driver.findElement(By.xpath("//*[text()='Rs. 500']")).isDisplayed();
 
         //ikinci urunlerin gorunurlugu
-        driver.findElement(By.xpath("//*[text()='Rs. 400']")).isDisplayed();
-        driver.findElement(By.xpath("//*[text()='1']")).isDisplayed();
-        driver.findElement(By.xpath("//*[text()='Rs. 400']")).isDisplayed();
+        assert driver.findElement(By.xpath("//*[text()='Rs. 400']")).isDisplayed();
+        assert driver.findElement(By.xpath("//*[text()='1']")).isDisplayed();
+        assert driver.findElement(By.xpath("//*[text()='Rs. 400']")).isDisplayed();
     }
 }
